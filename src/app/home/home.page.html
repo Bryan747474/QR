@@ -1,0 +1,109 @@
+
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon slot="start" name="arrow-back" routerLink="/usuarios" ></ion-icon>
+      <div id="logo">
+        <img src="https://es.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/core_market/generator/dist/generator/assets/images/websiteQRCode_noFrame.png" alt="">
+      </div>
+      <div></div>
+    </div>
+    <h1>Iniciar Sesion</h1>
+  </div>
+  
+  
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+
+        <ion-item>
+          <ion-icon  name="mail" style="color:black ;"></ion-icon>
+          <ion-input #txtUser type="text" class="input" placeholder="Correo" ></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-icon  name="lock-closed" style="color:black "></ion-icon>
+          <ion-input type="password" #txtPass placeholder="Contraseña"  class="input"></ion-input>
+        </ion-item>
+        
+        <ion-button class="form-button custom-font" expand="block" (click)="login(txtUser,txtPass)"  class="form-button">
+          Iniciar sesion  
+        </ion-button>
+      </ion-card-content>
+
+      
+
+      
+    </ion-card>
+    
+    <ion-button color="danger" expand="full-width" (click)="setOpen(true)" style="border-radius: 50px  ;" class="recupera">¿Haz olvidado tu contraseña?</ion-button>
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template >
+          <ion-header>
+            <ion-toolbar >
+              <ion-title >Recuperación</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Atrás</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+    
+      
+            <ion-card-header>
+              
+              <ion-card-title style="text-align: center; color: black;">Recupera tu contraseña facilmente</ion-card-title>
+              <hr>
+              <ion-card-subtitle>1)Para recuperar tu contraseña tienes que ingresar tu email 
+                                 <hr>
+                                 2)Te enviaremos un codigo con el cual podras restablecer tu contraseña
+                                 <hr>
+                                 3)Una vez ingresado el codigo la contraseña debe cambiarse
+              </ion-card-subtitle>
+            </ion-card-header>
+
+          </ion-content>
+          
+          <ion-card-content>
+
+            <ion-item>
+              <ion-icon  name="mail" style="color:black ;"></ion-icon>
+              <ion-input #txtUser type="text" class="input" placeholder="Correo" ></ion-input>
+            </ion-item>
+      
+            <ion-item>
+              <ion-icon  name="lock-closed" style="color:black "></ion-icon>
+              <ion-input type="password" #txtPass placeholder="Contraseña"  class="input"></ion-input>
+            </ion-item>
+            
+            <ion-button class="form-button custom-font" expand="block" (click)="login(txtUser,txtPass)"  class="form-button">
+              Iniciar sesion  
+            </ion-button>
+          </ion-card-content>
+    
+
+
+
+        </ng-template>
+      </ion-modal>
+  
+    
+    
+  
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="justify-content: center;">Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

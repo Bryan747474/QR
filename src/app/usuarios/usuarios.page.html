@@ -1,0 +1,185 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> {{ titulo }} </ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu  side="start" menuId="first" contentId="main">
+    
+  <ion-content>
+
+    <div class="menu-header-bg"></div>
+    <div class="header-content" >
+      <h3>RegistrAPP</h3>
+      <ion-label>
+        <h2></h2>
+        <p></p>
+      </ion-label>
+    </div>
+    <div class="action-button">
+    </div>
+
+    <ion-list>
+      
+      
+    <ion-item  [routerLink]="['/home']" >Iniciar sesion
+      <ion-icon name="log-in-outline" style="margin-left:10px ;"></ion-icon>
+    </ion-item>
+
+    <ion-item [routerLink]="['/homeprofe']">Iniciar como docente
+      <ion-icon name="man-outline" style="margin-left:10px ;"></ion-icon>
+    </ion-item>
+
+
+    <ion-item [routerLink]="['/registro']">Registrarse
+      <ion-icon name="person-add-outline" style="margin-left:10px ;"></ion-icon>
+    </ion-item>
+
+    <ion-item [routerLink]="['/informacion']">Informacion
+      <ion-icon name="information-circle-outline" style="margin-left:10px ;"></ion-icon>
+    </ion-item>
+
+    <ion-item [routerLink]="['/acercade']">Acerca de
+      <ion-icon name="warning-outline" style="margin-left:10px ;"></ion-icon>
+    </ion-item>
+
+    </ion-list>
+
+
+  </ion-content>
+
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content>
+  
+    
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="" height="70px" width="300" style="background-color: white; margin-left: 12px;">
+
+</ion-content>
+
+
+<ion-content class="body" style="margin-bottom: 10px;">
+
+  
+    <ion-card-header style="text-align: center;">
+      
+      <ion-card-title style="font-style: oblique;  color: black;"> RegistrAPP </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content style="text-align: center; color: black;">
+      Escanea y registra tu asistencia de manera inmediata escaneando un codigo QR
+    </ion-card-content>
+ 
+
+</ion-content>
+
+
+<ion-content class="info">
+
+
+  <img src="https://cdn-icons-png.flaticon.com/512/1243/1243933.png" alt="" height="50">
+  
+  <p style="color: black;" >Descubre como registrar tu asistencia con codigo QR</p>
+  
+</ion-content>
+
+
+
+
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="setOpen(true)" style="border-radius: 50px ;">Haz Click Aqui!</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template >
+      <ion-header>
+        <ion-toolbar >
+          <ion-title >Instrucciones</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Atrás</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+  
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+          <ion-card-title style="text-align: center; color: black;">Pasos para registrar tu asistencia con RegistrAPP</ion-card-title>
+          
+        </ion-card-header>
+      
+          <ion-slides [options]="option" class="ion-margin-top">
+            
+            <ion-slide>
+              <ion-card>
+                <img src="https://img.freepik.com/vector-premium/telefono-inteligente-inicio-sesion-usuario-sitio-interfaz-usuario-pagina-aplicacion-telefono-movil-smartphone-pantalla-dispositivo-icono-negocio_194782-39.jpg" alt="">
+                <p>1) Ingresa tus credenciales en el apartado de inicio de sesion</p>
+              </ion-card>
+            </ion-slide>
+      
+      
+      
+      
+            <ion-slide>
+              <ion-card>
+                <img   src="https://media.istockphoto.com/vectors/cell-phone-and-signal-icon-vector-vector-id1074164430?k=20&m=1074164430&s=170667a&w=0&h=hG78Y8YgZwrbPV417HK0E1O_6TdrilXQXHuiY0jKq70=" alt="" height="600px" width="600px">
+                <p> 2) Espera a que tu docente genere el codigo qr que luego sera escaneado </p>
+      
+              </ion-card>
+            </ion-slide>
+      
+      
+            <ion-slide>
+              <ion-card>
+                <img src="https://img.freepik.com/vector-premium/telefono-inteligente-codigo-qr-mano-escanear-codigo-qr-codigo-barras-escaneo-codigo-qr-telefono-movil_578506-254.jpg" alt="">
+                <p> 3) Escanea el codigo QR generado y listo!, Asistencia registrada!</p>
+              </ion-card>
+            </ion-slide>
+      
+      
+      
+           
+      
+      
+      
+            <ion-slide>
+              <ion-card>
+                <img src="https://t3.ftcdn.net/jpg/00/26/43/56/360_F_26435684_nI2nmc5VtQ0N3vbBld4DQFGSXN0G54vj.jpg" alt="">
+                <p> 4) Una vez escaneado el codigo, tu asistencia quedo registrada!</p>
+              </ion-card>
+            </ion-slide>
+      
+          </ion-slides>
+      
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    
+<ion-toolbar>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="1" d="M0,224L40,240C80,256,160,288,240,256C320,224,400,128,480,122.7C560,117,640,203,720,234.7C800,267,880,245,960,213.3C1040,181,1120,139,1200,128C1280,117,1360,139,1400,149.3L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+  </ion-toolbar>
+
+  </ion-toolbar>
+</ion-footer>
+  
+
+
